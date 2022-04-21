@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
         alarmManager.set(AlarmManager.RTC_WAKEUP,time,pendingIntent);
 
-        sendBroadcast(intent);
+
 
     }
 }
