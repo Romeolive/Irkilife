@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/blue"
+    tools:context=".SettingsActivity">
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/MediumBlue"
+                android:id="@+id/to_menu_btn"
+                android:text="@string/Menu"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="150dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_music"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/Music"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:textOff="@string/Russian"
+                    android:textOn="@string/English"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/text_music"
+                    android:layout_marginLeft="180dp"
+
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_translate"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/language"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/translate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="208dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/text_translate"
+                    android:gravity="center"
+                    android:textOff="@string/Russian"
+                    android:textOn="@string/English"
+                    android:textStyle="bold"
+
+
+                    />
+
+            </RelativeLayout>
+
+
+
+
+</LinearLayout>

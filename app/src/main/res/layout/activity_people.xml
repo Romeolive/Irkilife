@@ -83,6 +83,20 @@
             android:id="@+id/point8"
             android:background="@drawable/point_style"
             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:id="@+id/point9"
+            android:background="@drawable/point_style"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:id="@+id/point10"
+            android:background="@drawable/point_style"
+            />
 
     </LinearLayout>
 

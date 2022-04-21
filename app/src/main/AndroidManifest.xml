@@ -9,6 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BetaVersion_20">
+        <service
+            android:name=".BackgroundMusicService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LevelsActivity"
+            android:exported="true" />
         <activity
             android:name=".People"
             android:exported="true" />
@@ -21,6 +32,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".AlarmManag"/>
     </application>
 
 </manifest>

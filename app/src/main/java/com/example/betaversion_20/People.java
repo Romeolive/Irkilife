@@ -16,6 +16,7 @@ import android.widget.ImageView;
 
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -61,11 +62,12 @@ public class People extends AppCompatActivity {
         four = findViewById(R.id.levelOneAnswerFour);
         to_next_btn = findViewById(R.id.to_next_button);
         imageView  = findViewById(R.id.image_view);
- //       if (Arrays.COUNTER == 7){
- //           Intent intent = new Intent(this,MainActivity.class);
- //           startActivity(intent);
-  //          People.this.finish();
-  //      }
+        if (Arrays.COUNTER == 11){
+           Intent intent = new Intent(this,MainActivity.class);
+            Toast.makeText(getApplicationContext(),"Вы прошли", Toast.LENGTH_LONG);
+            startActivity(intent);
+            People.this.finish();
+        }
         DocumentReference docRef = db.collection(Arrays.LEVELS_NAMES_PEOPLE[Arrays.COUNTER]).document(Arrays.LEVELS_NAMES_PEOPLE[Arrays.COUNTER]);
 
         docRef.get().addOnCompleteListener(task -> {

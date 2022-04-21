@@ -2,4 +2,12 @@
     <string name="app_name">IrkiLife</string>
     <string name="dlasdl_akdlsaklakfdl_kfd">dlasdl;akdlsaklakfdl;kfd</string>
     <string name="to_next_btn">Далее</string>
+    <string name="todo">TODO</string>
+    <string name="play_menu">Играть</string>
+    <string name="places">Твои места</string>
+    <string name="Music">Музыка</string>
+    <string name="English">Английский</string>
+    <string name="Russian">Русский</string>
+    <string name="language">Язык</string>
+    <string name="Menu">Меню</string>
 </resources>
