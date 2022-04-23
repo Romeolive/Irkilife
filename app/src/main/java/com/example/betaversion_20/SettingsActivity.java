@@ -1,6 +1,7 @@
 package com.example.betaversion_20;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 
 import android.content.Context;
@@ -15,7 +16,7 @@ import com.google.android.material.switchmaterial.SwitchMaterial;
 public class SettingsActivity extends AppCompatActivity {
 
     Button to_menu;
-    SwitchMaterial music;
+    SwitchCompat music;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

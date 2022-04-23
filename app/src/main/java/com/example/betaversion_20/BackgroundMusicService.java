@@ -28,7 +28,6 @@ public class BackgroundMusicService extends Service {
         return Service.START_STICKY;
     }
 
-
     @Override
     public void onDestroy() {
         super.onDestroy();

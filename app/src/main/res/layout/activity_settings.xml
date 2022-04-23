@@ -19,39 +19,36 @@
                 android:text="@string/Menu"/>
 
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="150dp"
-                android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/text_music"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/Music"/>
+        <TextView
+            android:id="@+id/text_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/Music"
+            android:textSize="20dp" />
 
-                <com.google.android.material.switchmaterial.SwitchMaterial
-                    android:id="@+id/music"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="183dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/text_music"
+            android:gravity="center"
+            android:thumb="@drawable/thumb"
+            app:track="@drawable/track"
 
-                    android:gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:textOff="@string/Russian"
-                    android:textOn="@string/English"
-                    android:textStyle="bold"
-                    android:layout_toRightOf="@+id/text_music"
-                    android:layout_marginLeft="180dp"
+            />
 
+    </RelativeLayout>
 
-                    />
-
-            </RelativeLayout>
-
-            <RelativeLayout
+    <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -76,6 +73,7 @@
                     android:textOff="@string/Russian"
                     android:textOn="@string/English"
                     android:textStyle="bold"
+                    app:track="@drawable/track"
 
 
                     />

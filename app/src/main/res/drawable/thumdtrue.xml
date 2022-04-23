@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+
+        <shape android:shape="oval">
+            <solid android:color="@color/teal_200"/>
+            <size android:width="28dp"
+                android:height="28dp"/>
+            <stroke android:width="1dp"
+                android:color="#34c759"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_baseline_volume_up_15"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp"
+        android:bottom="2dp"
+
+        >
+
+    </item>
+</layer-list>
