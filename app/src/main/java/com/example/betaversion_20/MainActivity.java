@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         long time = 1000*2;
 
-        alarmManager.set(AlarmManager.RTC_WAKEUP,time,pendingIntent);
+
 
     }
 
@@ -96,13 +96,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
 
+        Calendar notifyTime = Calendar.getInstance();
+        notifyTime.setTimeInMillis(System.currentTimeMillis());
+        int day = notifyTime.get(Calendar.HOUR_OF_DAY);
+        if (day >= 10){
+            notifyTime.add(Calendar.DATE,1);
+        }
+        notifyTime.set(Calendar.HOUR_OF_DAY,10);
+        notifyTime.set(Calendar.MINUTE, 0);
+        notifyTime.set(Calendar.SECOND,0);
+
+
         Intent intent = new Intent(MainActivity.this, AlarmManag.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this,0,intent,0);
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         long time = 3600000;
 
-        alarmManager.set(AlarmManager.RTC_WAKEUP,time,pendingIntent);
 
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+        //alarmManager.set(AlarmManager.RTC_WAKEUP,time,pendingIntent);
+
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, notifyTime.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
     }
 }

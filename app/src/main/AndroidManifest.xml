@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BetaVersion_20">
+        <activity
+            android:name=".EndOfLevelPeople"
+            android:exported="true" />
+
         <service
             android:name=".BackgroundMusicService"
             android:enabled="true"
@@ -33,7 +37,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".AlarmManag"/>
+        <receiver android:name=".AlarmManag" />
     </application>
 
 </manifest>

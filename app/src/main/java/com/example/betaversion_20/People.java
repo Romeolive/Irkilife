@@ -62,12 +62,18 @@ public class People extends AppCompatActivity {
         four = findViewById(R.id.levelOneAnswerFour);
         to_next_btn = findViewById(R.id.to_next_button);
         imageView  = findViewById(R.id.image_view);
-        if (Arrays.COUNTER == 11){
-           Intent intent = new Intent(this,MainActivity.class);
-            Toast.makeText(getApplicationContext(),"Вы прошли", Toast.LENGTH_LONG);
-            startActivity(intent);
-            People.this.finish();
+
+        if (Arrays.COUNTER == 12){
+
+                Intent intent = new Intent(People.this,EndOfLevelPeople.class);
+                intent.putExtra("results", String.valueOf(Arrays.COUNTER_OF_TRUE));
+                startActivity(intent);
+                overridePendingTransition(R.anim.to_next_like_list,R.anim.to_back);
+
+           Arrays.COUNTER_OF_TRUE = 0;
+           People.this.finish();
         }
+
         DocumentReference docRef = db.collection(Arrays.LEVELS_NAMES_PEOPLE[Arrays.COUNTER]).document(Arrays.LEVELS_NAMES_PEOPLE[Arrays.COUNTER]);
 
         docRef.get().addOnCompleteListener(task -> {
@@ -89,6 +95,7 @@ public class People extends AppCompatActivity {
         });
 
         //TODO connecting the reboot function to the level
+        //to_next_btn.setOnClickListener(view -> reload());
         to_next_btn.setOnClickListener(view -> reload());
         //TODO making the button invisible
         to_next_btn.setVisibility(View.GONE);
@@ -115,7 +122,7 @@ public class People extends AppCompatActivity {
                 imageView.setImageResource(R.drawable.tree);
                 first.setBackgroundColor(Color.GREEN);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_true);
-
+                Arrays.COUNTER_OF_TRUE+=1;
             } else {
                 first.setBackgroundColor(Color.RED);
                 imageView.setImageResource(R.drawable.tree);
@@ -139,6 +146,8 @@ public class People extends AppCompatActivity {
             scrollView_people.setOnTouchListener((view1, motionEvent) -> false);
             //TODO making button visible
             to_next_btn.setVisibility(View.VISIBLE);
+            scrollView_people.setNestedScrollingEnabled(true);
+            scrollView_people.fullScroll(View.FOCUS_DOWN);
 
 
             if (answer.equals(Arrays.KEY_PEOPLE[Arrays.COUNTER])) {
@@ -147,6 +156,7 @@ public class People extends AppCompatActivity {
                 textView.setBackgroundResource(R.drawable.point_style_true);
                 second.setBackgroundColor(Color.GREEN);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_true);
+                Arrays.COUNTER_OF_TRUE+=1;
             } else {
 
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_false);
@@ -170,6 +180,8 @@ public class People extends AppCompatActivity {
             scrollView_people.setOnTouchListener((view1, motionEvent) -> false);
             //TODO making button visible
             to_next_btn.setVisibility(View.VISIBLE);
+            scrollView_people.setNestedScrollingEnabled(true);
+            scrollView_people.fullScroll(View.FOCUS_DOWN);
 
 
             if (answer.equals(Arrays.KEY_PEOPLE[Arrays.COUNTER])) {
@@ -179,6 +191,7 @@ public class People extends AppCompatActivity {
                 textView.setBackgroundResource(R.drawable.point_style_true);
                 third.setBackgroundColor(Color.GREEN);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_true);
+                Arrays.COUNTER_OF_TRUE+=1;
 
             } else {
 
@@ -203,6 +216,8 @@ public class People extends AppCompatActivity {
             scrollView_people.setOnTouchListener((view1, motionEvent) -> false);
             //TODO making button visible
             to_next_btn.setVisibility(View.VISIBLE);
+            scrollView_people.setNestedScrollingEnabled(true);
+            scrollView_people.fullScroll(View.FOCUS_DOWN);
 
             if (answer.equals(Arrays.KEY_PEOPLE[Arrays.COUNTER])) {
 
@@ -212,6 +227,7 @@ public class People extends AppCompatActivity {
 
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_true);
                 four.setBackgroundColor(Color.GREEN);
+                Arrays.COUNTER_OF_TRUE+=1;
 
             } else {
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_false);

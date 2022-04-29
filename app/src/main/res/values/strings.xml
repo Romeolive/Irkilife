@@ -10,4 +10,8 @@
     <string name="Russian">Русский</string>
     <string name="language">Язык</string>
     <string name="Menu">Меню</string>
+    <string name="congratulation">Ты молодец!</string>
+    <string name="ywin">Поздравляем, ты прошел уровень.</string>
+    <string name="result_of_level">Твой результат</string>
+    <string name="To_menu">В меню</string>
 </resources>
