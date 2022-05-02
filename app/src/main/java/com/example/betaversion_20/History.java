@@ -1,6 +1,7 @@
 package com.example.betaversion_20;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -38,6 +39,8 @@ public class History extends AppCompatActivity {
             textView1.setBackgroundResource(pair.getValue());
         }
 
+
+
         textView_history = findViewById(R.id.levelOneQuestionHistory);
         history_text = findViewById(R.id.history_text);
         scrollView_history = findViewById(R.id.scroll_history);
@@ -63,17 +66,17 @@ public class History extends AppCompatActivity {
             History.this.finish();
         }
 
-        DocumentReference docRef = db.collection(Arrays.LEVELS_NAMES_PEOPLE[Arrays.HISTORY_COUNTER]).document(Arrays.LEVELS_NAMES_PEOPLE[Arrays.HISTORY_COUNTER]);
+        DocumentReference docRef = db.collection(Arrays.LEVELS_NAMES_HISTORY[Arrays.HISTORY_COUNTER]).document(Arrays.LEVELS_NAMES_HISTORY[Arrays.HISTORY_COUNTER]);
 
         docRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 DocumentSnapshot document = task.getResult();
                 if (document.exists()) {
-                    textView_history.setText(document.getData().get(Arrays.LEVELS_NAMES_PEOPLE[Arrays.HISTORY_COUNTER]).toString());
-                    first.setText(document.getData().get(Arrays.ANSWERS_NAMES_PEOPLE[Arrays.HISTORY_COUNTER]+Arrays.NUMBERS[0]).toString());
-                    second.setText(document.getData().get(Arrays.ANSWERS_NAMES_PEOPLE[Arrays.HISTORY_COUNTER]+Arrays.NUMBERS[1]).toString());
-                    third.setText(document.getData().get(Arrays.ANSWERS_NAMES_PEOPLE[Arrays.HISTORY_COUNTER]+Arrays.NUMBERS[2]).toString());
-                    four.setText(document.getData().get(Arrays.ANSWERS_NAMES_PEOPLE[Arrays.HISTORY_COUNTER]+Arrays.NUMBERS[3]).toString());
+                    textView_history.setText(document.getData().get(Arrays.LEVELS_NAMES_HISTORY[Arrays.HISTORY_COUNTER]).toString());
+                    first.setText(document.getData().get(Arrays.ANSWERS_NAMES_HISTORY[Arrays.HISTORY_COUNTER]+Arrays.NUMBERS[0]).toString());
+                    second.setText(document.getData().get(Arrays.ANSWERS_NAMES_HISTORY[Arrays.HISTORY_COUNTER]+Arrays.NUMBERS[1]).toString());
+                    third.setText(document.getData().get(Arrays.ANSWERS_NAMES_HISTORY[Arrays.HISTORY_COUNTER]+Arrays.NUMBERS[2]).toString());
+                    four.setText(document.getData().get(Arrays.ANSWERS_NAMES_HISTORY[Arrays.HISTORY_COUNTER]+Arrays.NUMBERS[3]).toString());
 
                 } else {
                     Log.d(TAG, "No such document");
@@ -105,7 +108,7 @@ public class History extends AppCompatActivity {
             scrollView_history.setNestedScrollingEnabled(true);
             scrollView_history.fullScroll(View.FOCUS_DOWN);
 
-            if (answer.equals(Arrays.KEY_PEOPLE[Arrays.HISTORY_COUNTER])) {
+            if (answer.equals(Arrays.KEY_HISTORY[Arrays.HISTORY_COUNTER])) {
                 TextView textView = findViewById(Arrays.TEXT_VIEW_HISTORY[Arrays.HISTORY_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_true);
                 imageView_history.setImageResource(Arrays.IMAGES[Arrays.HISTORY_COUNTER]);
@@ -139,7 +142,7 @@ public class History extends AppCompatActivity {
             scrollView_history.fullScroll(View.FOCUS_DOWN);
 
 
-            if (answer.equals(Arrays.KEY_PEOPLE[Arrays.HISTORY_COUNTER])) {
+            if (answer.equals(Arrays.KEY_HISTORY[Arrays.HISTORY_COUNTER])) {
 
                 TextView textView = findViewById(Arrays.TEXT_VIEW_HISTORY[Arrays.HISTORY_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_true);
@@ -175,7 +178,7 @@ public class History extends AppCompatActivity {
             scrollView_history.fullScroll(View.FOCUS_DOWN);
 
 
-            if (answer.equals(Arrays.KEY_PEOPLE[Arrays.HISTORY_COUNTER])) {
+            if (answer.equals(Arrays.KEY_HISTORY[Arrays.HISTORY_COUNTER])) {
 
 
                 TextView textView = findViewById(Arrays.TEXT_VIEW_HISTORY[Arrays.HISTORY_COUNTER]);
@@ -212,7 +215,7 @@ public class History extends AppCompatActivity {
             scrollView_history.setNestedScrollingEnabled(true);
             scrollView_history.fullScroll(View.FOCUS_DOWN);
 
-            if (answer.equals(Arrays.KEY_PEOPLE[Arrays.HISTORY_COUNTER])) {
+            if (answer.equals(Arrays.KEY_HISTORY[Arrays.HISTORY_COUNTER])) {
 
 
                 TextView textView = findViewById(Arrays.TEXT_VIEW_HISTORY[Arrays.HISTORY_COUNTER]);

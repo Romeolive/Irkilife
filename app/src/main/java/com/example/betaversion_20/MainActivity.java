@@ -2,6 +2,7 @@ package com.example.betaversion_20;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 
 import android.app.AlarmManager;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
 
         setting = findViewById(R.id.settings_btn);
