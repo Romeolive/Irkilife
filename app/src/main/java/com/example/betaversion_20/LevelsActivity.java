@@ -9,16 +9,16 @@ import android.widget.Button;
 
 public class LevelsActivity extends AppCompatActivity {
 
-    Button peopleBtn;
+    Button peopleBtn,historyBtn,symbolBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_levels);
 
         peopleBtn = findViewById(R.id.people);
-        peopleBtn.setOnClickListener(view -> {
-            Intent intent = new Intent(LevelsActivity.this,People.class);
-            startActivity(intent);
-        });
+        historyBtn =findViewById(R.id.history);
+
+        peopleBtn.setOnClickListener(view -> startActivity(new Intent(LevelsActivity.this,People.class)));
+        historyBtn.setOnClickListener(view -> startActivity(new Intent(LevelsActivity.this,History.class)));
     }
 }

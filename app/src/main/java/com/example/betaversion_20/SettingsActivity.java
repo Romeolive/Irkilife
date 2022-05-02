@@ -10,7 +10,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.google.android.material.switchmaterial.SwitchMaterial;
+
 
 
 public class SettingsActivity extends AppCompatActivity {
@@ -51,18 +51,15 @@ public class SettingsActivity extends AppCompatActivity {
 
         music.setOnClickListener(view -> {
 
-
             if (music.isChecked()){
 
                 Intent intent2 = new Intent(SettingsActivity.this, BackgroundMusicService.class);
                 startService(intent2);
-
             }
             else{
                 Intent intent2 = new Intent(SettingsActivity.this, BackgroundMusicService.class);
                 stopService(intent2);
             }
-
 
         });
     }

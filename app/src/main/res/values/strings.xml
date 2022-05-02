@@ -14,4 +14,7 @@
     <string name="ywin">Поздравляем, ты прошел уровень.</string>
     <string name="result_of_level">Твой результат</string>
     <string name="To_menu">В меню</string>
+    <string name="people">Личности</string>
+    <string name="history">История</string>
+    <string name="symbol">Символы</string>
 </resources>
