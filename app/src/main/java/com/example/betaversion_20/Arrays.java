@@ -23,13 +23,15 @@ public class Arrays {
             "Л. И. Гайдай","Д.А.Дмитриева","Б.Волынов","Константин Трапезников"};
 
     public static String[] LEVELS_NAMES_HISTORY = {"questionFirstHistory","questionSecondHistory","questionThirdHistory","questionFourHistory",
-            "questionFiveHistory","questionSixHistory","questionSevenHistory"};
+            "questionFiveHistory","questionSixHistory","questionSevenHistory","questionEightHistory","questionNineHistory",
+            "questionTenHistory","questionElevenHistory","questionTwelveHistory"};
 
     public static String[] ANSWERS_NAMES_HISTORY = {"answerFirstHistory","answerSecondHistory","answerThirdHistory","answerThirdHistory",
-            "answerThirdHistory","answerSixHistory","answerSevenHistory"};
+            "answerThirdHistory","answerSixHistory","answerSevenHistory","answerEightHistory","answerNineHistory",
+            "answerTenHistory","answerElevenHistory","answerTwelveHistory"};
 
     public static String[] KEY_HISTORY = {"1851","16 августа 1898 года","В честь восстания Декабристов 1919 года","1661","Буряты","Тофалары",
-            "Рабочие"};
+            "Рабочие","Тальцы","Ясак","Ангарск","Шаманизм","1937"};
 
     public static int COUNTER = 0;
     public static int COUNTER_OF_TRUE = 0;
