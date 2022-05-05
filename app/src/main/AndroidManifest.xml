@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BetaVersion_20">
         <activity
+            android:name=".Symbol"
+            android:exported="true" />
+        <activity
             android:name=".History"
             android:exported="true" />
         <activity

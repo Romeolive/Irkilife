@@ -79,14 +79,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
 
-        stopService(new Intent(MainActivity.this, BackgroundMusicService.class));
-
         Intent intent = new Intent(MainActivity.this, AlarmManag.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this,0,intent,0);
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-
-
-
+        stopService(new Intent(MainActivity.this, BackgroundMusicService.class));
 
     }
 
@@ -114,5 +110,7 @@ public class MainActivity extends AppCompatActivity {
         //alarmManager.set(AlarmManager.RTC_WAKEUP,time,pendingIntent);
 
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, notifyTime.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+        stopService(new Intent(MainActivity.this, BackgroundMusicService.class));
     }
+
 }
