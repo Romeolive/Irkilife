@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         setting = findViewById(R.id.settings_btn);
         play = findViewById(R.id.play_menu_btn);
         results = findViewById(R.id.result_menu_btn);
@@ -49,10 +47,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             MainActivity.this.onStop();
         });
-
-
     }
-
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onStart() {
@@ -110,7 +105,8 @@ public class MainActivity extends AppCompatActivity {
         //alarmManager.set(AlarmManager.RTC_WAKEUP,time,pendingIntent);
 
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, notifyTime.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
-        stopService(new Intent(MainActivity.this, BackgroundMusicService.class));
+
     }
+
 
 }

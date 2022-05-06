@@ -31,13 +31,13 @@ public class Arrays {
             "Рабочие","Тальцы","Ясак","Ангарск","Шаманизм","1937"};
 
     public static  String[] LEVEL_NAMES_SYMBOLS = {"questionFirstSymbol","questionSecondSymbol","questionThirdSymbol",
-            "questionFourSymbol"};
+            "questionFourSymbol","questionFiveSymbol"};
 
     public static  String[] ANSWERS_NAMES_SYMBOLS = {"answerFirstSymbol","answerSecondSymbol","answerThirdSymbol",
-            "answerFourSymbol"};
+            "answerFourSymbol","answerFiveSymbol"};
 
     public static  String[] KEY_SYMBOLS = {"18 февраля 1690 года","Бабр и соболь","Архиерейский дом","Крестовоздвиженская церковь",
-    ""};
+    "Михаил Переяславец"};
 
     public static int COUNTER = 0;
     public static int COUNTER_OF_TRUE = 0;
