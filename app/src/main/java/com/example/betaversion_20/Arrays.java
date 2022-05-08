@@ -31,13 +31,13 @@ public class Arrays {
             "Рабочие","Тальцы","Ясак","Ангарск","Шаманизм","1937"};
 
     public static  String[] LEVEL_NAMES_SYMBOLS = {"questionFirstSymbol","questionSecondSymbol","questionThirdSymbol",
-            "questionFourSymbol","questionFiveSymbol"};
+            "questionFourSymbol","questionFiveSymbol","questionSixSymbol"};
 
     public static  String[] ANSWERS_NAMES_SYMBOLS = {"answerFirstSymbol","answerSecondSymbol","answerThirdSymbol",
-            "answerFourSymbol","answerFiveSymbol"};
+            "answerFourSymbol","answerFiveSymbol","answerSixSymbol"};
 
     public static  String[] KEY_SYMBOLS = {"18 февраля 1690 года","Бабр и соболь","Архиерейский дом","Крестовоздвиженская церковь",
-    "Михаил Переяславец"};
+    "Михаил Переяславец","Женам Декабристов"};
 
     public static int COUNTER = 0;
     public static int COUNTER_OF_TRUE = 0;
@@ -57,6 +57,9 @@ public class Arrays {
     public static int[] IMAGES = {R.drawable.akimov,R.drawable.yakov,R.drawable.speranskuy,R.drawable.sykachev,
             R.drawable.amurckuy,R.drawable.vampilov,R.drawable.evtushenko,R.drawable.mazuev,R.drawable.gyuday,
             R.drawable.dmitrieva,R.drawable.volynov,R.drawable.trapeznickov};
+    public static int[] IMAGES_HISTORY = {R.drawable.geog,R.drawable.train,R.drawable.decembers,R.drawable.irkutsk_city,
+            R.drawable.byryat,R.drawable.tof,R.drawable.christian,R.drawable.talzy,R.drawable.yasak,R.drawable.angarsk,
+            R.drawable.shaman,R.drawable.oblast};
 
 
     public static Map<Integer,Integer> MAP_AR = new HashMap<>();
