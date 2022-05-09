@@ -1,14 +1,9 @@
 package com.example.betaversion_20;
 
-
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class Arrays {
-
-
-
     public static String[] NUMBERS = {"One","Two","Three","Four"};
 
     public static String[] LEVELS_NAMES_PEOPLE = {"questionFirstLevel","questionSecondLevel","questionThirdLevel","questionFourLevel",
@@ -31,13 +26,15 @@ public class Arrays {
             "Рабочие","Тальцы","Ясак","Ангарск","Шаманизм","1937"};
 
     public static  String[] LEVEL_NAMES_SYMBOLS = {"questionFirstSymbol","questionSecondSymbol","questionThirdSymbol",
-            "questionFourSymbol","questionFiveSymbol","questionSixSymbol"};
+            "questionFourSymbol","questionFiveSymbol","questionSixSymbol","questionSevenSymbol","questionEightSymbol",
+    "questionNineSymbols","questionTenSymbol"};
 
     public static  String[] ANSWERS_NAMES_SYMBOLS = {"answerFirstSymbol","answerSecondSymbol","answerThirdSymbol",
-            "answerFourSymbol","answerFiveSymbol","answerSixSymbol"};
+            "answerFourSymbol","answerFiveSymbol","answerSixSymbol","answerSevenSymbol","answerEightSymbol",
+    "answerNineSymbols","answerTenSymbol"};
 
     public static  String[] KEY_SYMBOLS = {"18 февраля 1690 года","Бабр и соболь","Архиерейский дом","Крестовоздвиженская церковь",
-    "Михаил Переяславец","Женам Декабристов"};
+    "Михаил Переяславец","Женам Декабристов","Байкал","Большая","Иркутский комсомолец","Воду"};
 
     public static int COUNTER = 0;
     public static int COUNTER_OF_TRUE = 0;
@@ -60,7 +57,6 @@ public class Arrays {
     public static int[] IMAGES_HISTORY = {R.drawable.geog,R.drawable.train,R.drawable.decembers,R.drawable.irkutsk_city,
             R.drawable.byryat,R.drawable.tof,R.drawable.christian,R.drawable.talzy,R.drawable.yasak,R.drawable.angarsk,
             R.drawable.shaman,R.drawable.oblast};
-
 
     public static Map<Integer,Integer> MAP_AR = new HashMap<>();
 
