@@ -55,6 +55,7 @@ public class Arrays {
     public static int[] IMAGES_HISTORY = {R.drawable.geog,R.drawable.train,R.drawable.decembers,R.drawable.irkutsk_city,
             R.drawable.byryat,R.drawable.tof,R.drawable.christian,R.drawable.talzy,R.drawable.yasak,R.drawable.angarsk,
             R.drawable.shaman,R.drawable.oblast};
+    public static int[] IMAGES_SYMBOLS = {};
 
     public static Map<Integer,Integer> MAP_AR = new HashMap<>();
 
