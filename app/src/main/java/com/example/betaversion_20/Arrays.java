@@ -28,11 +28,9 @@ public class Arrays {
     public static  String[] LEVEL_NAMES_SYMBOLS = {"questionFirstSymbol","questionSecondSymbol","questionThirdSymbol",
             "questionFourSymbol","questionFiveSymbol","questionSixSymbol","questionSevenSymbol","questionEightSymbol",
     "questionNineSymbols","questionTenSymbol","questionElevenSymbol","questionTwelveSymbol"};
-
     public static  String[] ANSWERS_NAMES_SYMBOLS = {"answerFirstSymbol","answerSecondSymbol","answerThirdSymbol",
             "answerFourSymbol","answerFiveSymbol","answerSixSymbol","answerSevenSymbol","answerEightSymbol",
     "answerNineSymbols","answerTenSymbol","answerElevenSymbol","answerTwelveSymbol"};
-
     public static  String[] KEY_SYMBOLS = {"18 февраля 1690 года","Бабр и соболь","Архиерейский дом","Крестовоздвиженская церковь",
     "Михаил Переяславец","Женам Декабристов","Байкал","Большая","Иркутский комсомолец","Воду","А.П.Чехов","«Михаил Строгов, или курьер царя» "};
 
