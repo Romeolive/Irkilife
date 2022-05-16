@@ -167,8 +167,10 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="500dp"
         android:id="@+id/image_view"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
 
         />
 

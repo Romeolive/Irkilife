@@ -235,7 +235,6 @@ public class History extends AppCompatActivity {
 
             }
         });
-
     }
     //TODO метод перезагрузки экрана с увеличением номера уровня(COUNTER)
     private void reload(){

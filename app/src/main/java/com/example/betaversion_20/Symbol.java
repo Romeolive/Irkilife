@@ -109,13 +109,13 @@ public class Symbol extends AppCompatActivity {
             if (answer.equals(Arrays.KEY_SYMBOLS[Arrays.SYMBOL_COUNTER])) {
                 TextView textView = findViewById(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_true);
-                imageView_symbol.setImageResource(Arrays.IMAGES[Arrays.SYMBOL_COUNTER]);
+                imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
                 first.setBackgroundColor(Color.GREEN);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER],R.drawable.point_style_true);
                 Arrays.COUNTER_OF_TRUE+=1;
             } else {
                 first.setBackgroundColor(Color.RED);
-                imageView_symbol.setImageResource(Arrays.IMAGES[Arrays.SYMBOL_COUNTER]);
+                imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
                 symbol_text.setText(R.string.app_name);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER],R.drawable.point_style_false);
                 TextView textView = findViewById(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER]);
@@ -147,14 +147,14 @@ public class Symbol extends AppCompatActivity {
                 second.setBackgroundColor(Color.GREEN);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER],R.drawable.point_style_true);
                 Arrays.COUNTER_OF_TRUE+=1;
-                imageView_symbol.setImageResource(Arrays.IMAGES[Arrays.SYMBOL_COUNTER]);
+                imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
             } else {
 
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER],R.drawable.point_style_false);
                 TextView textView = findViewById(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
                 second.setBackgroundColor(Color.RED);
-                imageView_symbol.setImageResource(Arrays.IMAGES[Arrays.SYMBOL_COUNTER]);
+                imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
 
 
             }
@@ -184,7 +184,7 @@ public class Symbol extends AppCompatActivity {
                 third.setBackgroundColor(Color.GREEN);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER],R.drawable.point_style_true);
                 Arrays.COUNTER_OF_TRUE+=1;
-                imageView_symbol.setImageResource(Arrays.IMAGES[Arrays.SYMBOL_COUNTER]);
+                imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
 
             } else {
 
@@ -193,7 +193,7 @@ public class Symbol extends AppCompatActivity {
                 TextView textView = findViewById(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
                 third.setBackgroundColor(Color.RED);
-                imageView_symbol.setImageResource(Arrays.IMAGES[Arrays.SYMBOL_COUNTER]);
+                imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
 
             }
         });
@@ -222,14 +222,14 @@ public class Symbol extends AppCompatActivity {
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER],R.drawable.point_style_true);
                 four.setBackgroundColor(Color.GREEN);
                 Arrays.COUNTER_OF_TRUE+=1;
-                imageView_symbol.setImageResource(Arrays.IMAGES[Arrays.SYMBOL_COUNTER]);
+                imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
 
             } else {
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER],R.drawable.point_style_false);
                 TextView textView = findViewById(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
                 four.setBackgroundColor(Color.RED);
-                imageView_symbol.setImageResource(Arrays.IMAGES[Arrays.SYMBOL_COUNTER]);
+                imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
 
             }
         });
