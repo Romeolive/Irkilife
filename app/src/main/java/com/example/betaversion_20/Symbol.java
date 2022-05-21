@@ -39,7 +39,6 @@ public class Symbol extends AppCompatActivity {
             textView1.setBackgroundResource(pair.getValue());
         }
 
-
         textView_symbol = findViewById(R.id.levelOneQuestionSymbol);
         symbol_text = findViewById(R.id.symbol_text);
         scrollView_symbol = findViewById(R.id.scroll_symbol);
