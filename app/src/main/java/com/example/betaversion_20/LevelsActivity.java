@@ -26,7 +26,7 @@ public class LevelsActivity extends AppCompatActivity {
         symbolBtn.setOnClickListener(view -> startActivity(new Intent(LevelsActivity.this, Symbol.class)));
     }
 
-    /*
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -35,7 +35,7 @@ public class LevelsActivity extends AppCompatActivity {
             Intent intent = new Intent(LevelsActivity.this, BackgroundMusicService.class);
             startService(intent);
         }
-    }*/
+    }
 
 
 }

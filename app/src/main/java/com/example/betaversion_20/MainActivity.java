@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         play = findViewById(R.id.play_menu_btn);
         results = findViewById(R.id.result_menu_btn);
 
+
         setting.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
@@ -64,11 +65,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
+
         SharedPreferences sharedPreferences = getSharedPreferences("test", Context.MODE_PRIVATE);
         if (sharedPreferences.getBoolean("value", true)){
-            Intent intent = new Intent(MainActivity.this, BackgroundMusicService.class);
-            startService(intent);
+            startService(new Intent(MainActivity.this, BackgroundMusicService.class));
         }
+
     }
     @Override
     protected void onDestroy() {
@@ -106,6 +108,12 @@ public class MainActivity extends AppCompatActivity {
 
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, notifyTime.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        stopService(new Intent(MainActivity.this, BackgroundMusicService.class));
     }
 
 
