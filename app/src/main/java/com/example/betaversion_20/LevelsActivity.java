@@ -21,7 +21,11 @@ public class LevelsActivity extends AppCompatActivity {
         historyBtn =findViewById(R.id.history);
         symbolBtn = findViewById(R.id.symbol);
 
-        peopleBtn.setOnClickListener(view -> startActivity(new Intent(LevelsActivity.this,People.class)));
+
+        peopleBtn.setOnClickListener(view -> {
+            startActivity(new Intent(LevelsActivity.this, People.class));
+            LevelsActivity.this.onDestroy();
+        });
         historyBtn.setOnClickListener(view -> startActivity(new Intent(LevelsActivity.this,History.class)));
         symbolBtn.setOnClickListener(view -> startActivity(new Intent(LevelsActivity.this, Symbol.class)));
     }

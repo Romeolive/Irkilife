@@ -1,9 +1,10 @@
 package com.example.betaversion_20;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 
@@ -25,8 +26,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Map;
 
-
-
 public class People extends AppCompatActivity {
 
     Button first,second,third,four,to_next_btn;
@@ -37,12 +36,10 @@ public class People extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     static String TAG = "ERROR";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_people);
-
 
         for (Map.Entry<Integer, Integer> pair : Arrays.MAP_AR.entrySet()) {
             TextView textView1 = findViewById(pair.getKey());
@@ -71,6 +68,7 @@ public class People extends AppCompatActivity {
                 overridePendingTransition(R.anim.to_next_like_list,R.anim.to_back);
 
            Arrays.COUNTER_OF_TRUE = 0;
+           Arrays.COUNTER = 0;
            People.this.finish();
         }
 
@@ -254,5 +252,21 @@ public class People extends AppCompatActivity {
         finish();
         overridePendingTransition(0, 0);
         startActivity(intent);
+    }
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Выйти в основное меню?")
+                .setMessage("Вы действительно хотите выйти?")
+                .setNegativeButton(android.R.string.no, null)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        //People.super.onBackPressed();
+                        startActivity(new Intent(People.this,MainActivity.class));
+                       People.this.onDestroy();
+                       Arrays.COUNTER = 0;
+                       Arrays.COUNTER_OF_TRUE = 0;
+                    }
+                }).create().show();
     }
 }

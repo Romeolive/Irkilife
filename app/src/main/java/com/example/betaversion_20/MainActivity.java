@@ -93,20 +93,25 @@ public class MainActivity extends AppCompatActivity {
         if (day >= 10){
             notifyTime.add(Calendar.DATE,1);
         }
-        notifyTime.set(Calendar.HOUR_OF_DAY,10);
-        notifyTime.set(Calendar.MINUTE, 0);
+        notifyTime.set(Calendar.HOUR_OF_DAY,23);
+        notifyTime.set(Calendar.MINUTE, 29);
         notifyTime.set(Calendar.SECOND,0);
 
 
-        Intent intent = new Intent(MainActivity.this, AlarmManag.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this,0,intent,0);
-        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-
-
-
+        //Intent intent = new Intent(MainActivity.this, AlarmManag.class);
+        //PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this,0,intent,0);
+        //AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         //alarmManager.set(AlarmManager.RTC_WAKEUP,time,pendingIntent);
-
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, notifyTime.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+        //alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, notifyTime.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+        //
+        Intent myIntent = new Intent(MainActivity.this , AlarmManag.class);
+        AlarmManager alarmManager1 = (AlarmManager)getSystemService(ALARM_SERVICE);
+        PendingIntent pendingIntent = PendingIntent.getService(MainActivity.this, 0, myIntent, 0);
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, 23);
+        calendar.set(Calendar.MINUTE, 40);
+        calendar.set(Calendar.SECOND, 00);
+        alarmManager1.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY , pendingIntent);  //set repeating every 24 hours
 
     }
 

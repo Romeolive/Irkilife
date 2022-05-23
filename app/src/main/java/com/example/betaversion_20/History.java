@@ -3,6 +3,8 @@ package com.example.betaversion_20;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -246,4 +248,22 @@ public class History extends AppCompatActivity {
         overridePendingTransition(0, 0);
         startActivity(intent);
     }
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Выйти в основное меню?")
+                .setMessage("Вы действительно хотите выйти?")
+                .setNegativeButton(android.R.string.no, null)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        //People.super.onBackPressed();
+                        startActivity(new Intent(History.this,MainActivity.class));
+                        History.this.onDestroy();
+                        Arrays.COUNTER = 0;
+                        Arrays.COUNTER_OF_TRUE = 0;
+                    }
+                }).create().show();
     }
+
+
+}
