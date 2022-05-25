@@ -34,11 +34,11 @@
     android:layout_height="wrap_content"
     android:text="@string/play_menu"
     android:textColor="@color/white"
-    android:textSize="20dp"
+    android:textSize="25sp"
     android:layout_marginTop="230dp"
     android:layout_marginLeft="30dp"
     android:layout_marginRight="30dp"
-
+    android:textStyle="bold"
     android:background="@drawable/custom_button_gradient"
 
     android:id="@+id/play_menu_btn"
@@ -49,7 +49,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="@string/places"
-    android:textSize="20dp"
+    android:textSize="20sp"
     android:textColor="@color/white"
     android:layout_marginTop="50dp"
     android:layout_marginLeft="30dp"

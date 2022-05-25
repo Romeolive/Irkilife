@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BetaVersion_20">
         <activity
+            android:name=".ResultsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Symbol"
             android:exported="true" />
         <activity
@@ -22,8 +34,7 @@
         <service
             android:name=".BackgroundMusicService"
             android:enabled="true"
-            android:exported="true"
-            />
+            android:exported="true" />
 
         <activity
             android:name=".SettingsActivity"
@@ -36,13 +47,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"></activity>
 
         <receiver android:name=".AlarmManag" />
     </application>

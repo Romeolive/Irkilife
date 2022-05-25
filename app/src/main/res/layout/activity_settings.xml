@@ -12,10 +12,13 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="300dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/MediumBlue"
                 android:id="@+id/to_menu_btn"
+                android:textColor="@color/white"
+                android:background="@drawable/levels_button"
+                android:textStyle="bold"
+                android:textSize="15sp"
                 android:text="@string/Menu"/>
 
 
@@ -48,7 +51,7 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
+    <!--<RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -60,6 +63,7 @@
                     android:textSize="20dp"
                     android:layout_marginTop="20dp"
                     android:text="@string/language"/>
+
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/translate"
@@ -78,7 +82,7 @@
 
                     />
 
-            </RelativeLayout>
+            </RelativeLayout> !-->
 
 
 

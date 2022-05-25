@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -244,11 +246,14 @@ public class Symbol extends AppCompatActivity {
         Arrays.SYMBOL_COUNTER+=1;
         finish();
         overridePendingTransition(0, 0);
+        SharedPreferences.Editor ed = getSharedPreferences("level", Context.MODE_PRIVATE).edit();
+        ed.putInt("number3", Arrays.COUNTER_OF_TRUE);
+        ed.apply();
         startActivity(intent);
     }
     @Override
     public void onBackPressed() {
-        new AlertDialog.Builder(this)
+        new AlertDialog.Builder(this,R.style.MyDialogTheme)
                 .setTitle("Выйти в основное меню?")
                 .setMessage("Вы действительно хотите выйти?")
                 .setNegativeButton(android.R.string.no, null)
@@ -259,6 +264,7 @@ public class Symbol extends AppCompatActivity {
                         Symbol.this.onDestroy();
                         Arrays.COUNTER = 0;
                         Arrays.COUNTER_OF_TRUE = 0;
+
                     }
                 }).create().show();
     }

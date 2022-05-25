@@ -1,5 +1,6 @@
 package com.example.betaversion_20;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
@@ -7,6 +8,7 @@ import androidx.appcompat.widget.SwitchCompat;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -62,6 +64,18 @@ public class SettingsActivity extends AppCompatActivity {
             }
 
         });
+    }
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        SharedPreferences sharedPreferences = getSharedPreferences("test", Context.MODE_PRIVATE);
+        if (sharedPreferences.getBoolean("value", true)){
+            Intent intent = new Intent(SettingsActivity.this, BackgroundMusicService.class);
+            startService(intent);
+        }
+
     }
 
     @Override

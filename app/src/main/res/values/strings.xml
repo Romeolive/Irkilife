@@ -18,4 +18,8 @@
     <string name="history">История</string>
     <string name="symbol">Символы</string>
     <string name="Baikal">Байкал</string>
+    <string name="irkilife">IrkiLife</string>
+    <string name="first_lvl">Уровень 1</string>
+    <string name="second_lvl">Уровень 2</string>
+    <string name="third_lvl">Уровень 3</string>
 </resources>

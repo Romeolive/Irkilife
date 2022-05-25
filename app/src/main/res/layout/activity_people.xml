@@ -135,6 +135,10 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="60dp"
         android:text=""
+        android:background="@drawable/levels_button"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
 
         android:id="@+id/levelOneAnswerOne"/>
     <Button
@@ -145,6 +149,10 @@
         android:layout_marginTop="30dp"
         android:text=""
         android:id="@+id/levelOneAnswerTwo"
+        android:textColor="@color/white"
+        android:background="@drawable/levels_button"
+        android:textStyle="bold"
+        android:textSize="15sp"
         />
     <Button
         android:layout_width="350dp"
@@ -153,7 +161,11 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:text=""
+        android:textColor="@color/white"
         android:id="@+id/levelOneAnswerThree"
+        android:background="@drawable/levels_button"
+        android:textStyle="bold"
+        android:textSize="15sp"
         />
     <Button
         android:layout_width="350dp"
@@ -162,7 +174,11 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:text=""
+        android:textColor="@color/white"
         android:id="@+id/levelOneAnswerFour"
+        android:background="@drawable/levels_button"
+        android:textStyle="bold"
+        android:textSize="15sp"
         />
 
     <ImageView

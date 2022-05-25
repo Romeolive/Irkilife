@@ -3,7 +3,9 @@ package com.example.betaversion_20;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,6 +28,8 @@ public class EndOfLevelPeople extends AppCompatActivity {
         Intent intent1 = getIntent();
         String result = intent1.getStringExtra("results");
         results.setText(result+"/"+12);
+
+
 
         to_menu.setOnClickListener(view -> {
             Intent intent = new Intent(EndOfLevelPeople.this, MainActivity.class);

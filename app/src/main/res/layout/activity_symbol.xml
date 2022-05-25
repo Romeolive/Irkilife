@@ -132,6 +132,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="60dp"
             android:text=""
+            android:textColor="@color/white"
+            android:background="@drawable/levels_button"
+            android:textStyle="bold"
+            android:textSize="15sp"
 
             android:id="@+id/levelOneAnswerOneSymbol"/>
         <Button
@@ -141,6 +145,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             android:text=""
+            android:textColor="@color/white"
+            android:background="@drawable/levels_button"
+            android:textStyle="bold"
+            android:textSize="15sp"
             android:id="@+id/levelOneAnswerTwoSymbol"
             />
         <Button
@@ -150,6 +158,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             android:text=""
+            android:textColor="@color/white"
+            android:background="@drawable/levels_button"
+            android:textStyle="bold"
+            android:textSize="15sp"
             android:id="@+id/levelOneAnswerThreeSymbol"
             />
         <Button
@@ -159,6 +171,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             android:text=""
+            android:textColor="@color/white"
+            android:background="@drawable/levels_button"
+            android:textStyle="bold"
+            android:textSize="15sp"
             android:id="@+id/levelOneAnswerFourSymbol"
             />
 

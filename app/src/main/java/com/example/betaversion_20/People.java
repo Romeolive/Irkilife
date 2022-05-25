@@ -1,24 +1,18 @@
 package com.example.betaversion_20;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-
 import android.app.AlertDialog;
-import android.content.DialogInterface;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
-
 import android.os.Bundle;
 import android.util.Log;
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -64,6 +58,7 @@ public class People extends AppCompatActivity {
 
                 Intent intent = new Intent(People.this,EndOfLevelPeople.class);
                 intent.putExtra("results", String.valueOf(Arrays.COUNTER_OF_TRUE));
+                intent.putExtra("class",getIntent());
                 startActivity(intent);
                 overridePendingTransition(R.anim.to_next_like_list,R.anim.to_back);
 
@@ -98,7 +93,6 @@ public class People extends AppCompatActivity {
         //TODO making the button invisible
         to_next_btn.setVisibility(View.GONE);
 
-
         //первая кнопка
         first.setOnClickListener(view -> {
             answer = first.getText().toString();
@@ -106,7 +100,6 @@ public class People extends AppCompatActivity {
             second.setClickable(false);
             third.setClickable(false);
             four.setClickable(false);
-
             //TODO allow to the ScrollView to scroll
             scrollView_people.setOnTouchListener((view1, motionEvent) -> false);
             //TODO making button visible
@@ -128,7 +121,6 @@ public class People extends AppCompatActivity {
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_false);
                 TextView textView = findViewById(Arrays.TEXT_VIEW[Arrays.COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
-
             }
         });
         //вторая кнопка
@@ -147,7 +139,6 @@ public class People extends AppCompatActivity {
             scrollView_people.setNestedScrollingEnabled(true);
             scrollView_people.fullScroll(View.FOCUS_DOWN);
 
-
             if (answer.equals(Arrays.KEY_PEOPLE[Arrays.COUNTER])) {
 
                 TextView textView = findViewById(Arrays.TEXT_VIEW[Arrays.COUNTER]);
@@ -157,13 +148,11 @@ public class People extends AppCompatActivity {
                 Arrays.COUNTER_OF_TRUE+=1;
                 imageView.setImageResource(Arrays.IMAGES[Arrays.COUNTER]);
             } else {
-
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_false);
                 TextView textView = findViewById(Arrays.TEXT_VIEW[Arrays.COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
                 second.setBackgroundColor(Color.RED);
                 imageView.setImageResource(Arrays.IMAGES[Arrays.COUNTER]);
-
 
             }
         });
@@ -183,20 +172,14 @@ public class People extends AppCompatActivity {
             scrollView_people.setNestedScrollingEnabled(true);
             scrollView_people.fullScroll(View.FOCUS_DOWN);
 
-
             if (answer.equals(Arrays.KEY_PEOPLE[Arrays.COUNTER])) {
-
-
                 TextView textView = findViewById(Arrays.TEXT_VIEW[Arrays.COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_true);
                 third.setBackgroundColor(Color.GREEN);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_true);
                 Arrays.COUNTER_OF_TRUE+=1;
                 imageView.setImageResource(Arrays.IMAGES[Arrays.COUNTER]);
-
             } else {
-
-
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_false);
                 TextView textView = findViewById(Arrays.TEXT_VIEW[Arrays.COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
@@ -222,23 +205,18 @@ public class People extends AppCompatActivity {
             scrollView_people.fullScroll(View.FOCUS_DOWN);
 
             if (answer.equals(Arrays.KEY_PEOPLE[Arrays.COUNTER])) {
-
-
                 TextView textView = findViewById(Arrays.TEXT_VIEW[Arrays.COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_true);
-
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_true);
                 four.setBackgroundColor(Color.GREEN);
                 Arrays.COUNTER_OF_TRUE+=1;
                 imageView.setImageResource(Arrays.IMAGES[Arrays.COUNTER]);
-
             } else {
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_false);
                 TextView textView = findViewById(Arrays.TEXT_VIEW[Arrays.COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
                 four.setBackgroundColor(Color.RED);
                 imageView.setImageResource(Arrays.IMAGES[Arrays.COUNTER]);
-
             }
         });
 
@@ -251,22 +229,25 @@ public class People extends AppCompatActivity {
         Arrays.COUNTER+=1;
         finish();
         overridePendingTransition(0, 0);
+        SharedPreferences.Editor ed = getSharedPreferences("level", Context.MODE_PRIVATE).edit();
+        ed.putInt("number1", Arrays.COUNTER_OF_TRUE);
+        ed.apply();
         startActivity(intent);
     }
     @Override
     public void onBackPressed() {
-        new AlertDialog.Builder(this)
+        new AlertDialog.Builder(this,R.style.MyDialogTheme)
                 .setTitle("Выйти в основное меню?")
                 .setMessage("Вы действительно хотите выйти?")
                 .setNegativeButton(android.R.string.no, null)
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface arg0, int arg1) {
-                        //People.super.onBackPressed();
-                        startActivity(new Intent(People.this,MainActivity.class));
-                       People.this.onDestroy();
-                       Arrays.COUNTER = 0;
-                       Arrays.COUNTER_OF_TRUE = 0;
-                    }
+                .setPositiveButton(android.R.string.yes, (arg0, arg1) -> {
+                    //People.super.onBackPressed();
+                    startActivity(new Intent(People.this,MainActivity.class));
+                   People.this.onDestroy();
+                   Arrays.COUNTER = 0;
+                   Arrays.COUNTER_OF_TRUE = 0;
+
                 }).create().show();
+
     }
 }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 
+import android.app.Activity;
 import android.app.AlarmManager;
 
 import android.app.PendingIntent;
@@ -15,6 +16,8 @@ import android.content.SharedPreferences;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
 import android.widget.Button;
 
 import java.util.Calendar;
@@ -42,6 +45,15 @@ public class MainActivity extends AppCompatActivity {
             MainActivity.this.onStop();
 
         });
+        results.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ResultsActivity.class));
+
+            }
+        });
+
+
 
         play.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, LevelsActivity.class);
@@ -103,13 +115,13 @@ public class MainActivity extends AppCompatActivity {
         //AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         //alarmManager.set(AlarmManager.RTC_WAKEUP,time,pendingIntent);
         //alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, notifyTime.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
-        //
+
         Intent myIntent = new Intent(MainActivity.this , AlarmManag.class);
         AlarmManager alarmManager1 = (AlarmManager)getSystemService(ALARM_SERVICE);
         PendingIntent pendingIntent = PendingIntent.getService(MainActivity.this, 0, myIntent, 0);
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 23);
-        calendar.set(Calendar.MINUTE, 40);
+        calendar.set(Calendar.HOUR_OF_DAY, 12);
+        calendar.set(Calendar.MINUTE, 00);
         calendar.set(Calendar.SECOND, 00);
         alarmManager1.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY , pendingIntent);  //set repeating every 24 hours
 
