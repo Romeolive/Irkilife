@@ -180,10 +180,11 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="400dp"
             android:id="@+id/image_view_symbol"
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
 
             />
 
@@ -191,6 +192,9 @@
             android:id="@+id/symbol_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:textSize="20dp"
             android:text="" />
         <Button
@@ -200,6 +204,8 @@
             android:id="@+id/to_next_button_Symbol"
             android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
+            android:background="@drawable/to_menu_gradient"
+            android:layout_marginBottom="20dp"
             />
 
     </LinearLayout>

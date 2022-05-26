@@ -42,4 +42,16 @@ public class LevelsActivity extends AppCompatActivity {
     }
 
 
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        SharedPreferences sharedPreferences = getSharedPreferences("test", Context.MODE_PRIVATE);
+        if (sharedPreferences.getBoolean("value", true)){
+            startService(new Intent(LevelsActivity.this, BackgroundMusicService.class));
+        }
+
+    }
+
+
 }

@@ -65,7 +65,7 @@ public class Symbol extends AppCompatActivity {
             overridePendingTransition(R.anim.to_next_like_list,R.anim.to_back);
 
             Arrays.COUNTER_OF_TRUE = 0;
-            Symbol.this.finish();
+            Symbol.this.onDestroy();
         }
 
         DocumentReference docRef = db.collection(Arrays.LEVEL_NAMES_SYMBOLS[Arrays.SYMBOL_COUNTER]).document(Arrays.LEVEL_NAMES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
@@ -115,12 +115,13 @@ public class Symbol extends AppCompatActivity {
                 textView.setBackgroundResource(R.drawable.point_style_true);
                 imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
                 first.setBackgroundColor(Color.GREEN);
+                symbol_text.setText(Arrays.SYMBOL_TEXT[Arrays.SYMBOL_COUNTER]);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER],R.drawable.point_style_true);
                 Arrays.COUNTER_OF_TRUE+=1;
             } else {
                 first.setBackgroundColor(Color.RED);
                 imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
-                symbol_text.setText(R.string.app_name);
+                symbol_text.setText(Arrays.SYMBOL_TEXT[Arrays.SYMBOL_COUNTER]);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER],R.drawable.point_style_false);
                 TextView textView = findViewById(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
@@ -151,6 +152,7 @@ public class Symbol extends AppCompatActivity {
                 second.setBackgroundColor(Color.GREEN);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER],R.drawable.point_style_true);
                 Arrays.COUNTER_OF_TRUE+=1;
+                symbol_text.setText(Arrays.SYMBOL_TEXT[Arrays.SYMBOL_COUNTER]);
                 imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
             } else {
 
@@ -158,6 +160,7 @@ public class Symbol extends AppCompatActivity {
                 TextView textView = findViewById(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
                 second.setBackgroundColor(Color.RED);
+                symbol_text.setText(Arrays.SYMBOL_TEXT[Arrays.SYMBOL_COUNTER]);
                 imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
 
 
@@ -188,6 +191,7 @@ public class Symbol extends AppCompatActivity {
                 third.setBackgroundColor(Color.GREEN);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER],R.drawable.point_style_true);
                 Arrays.COUNTER_OF_TRUE+=1;
+                symbol_text.setText(Arrays.SYMBOL_TEXT[Arrays.SYMBOL_COUNTER]);
                 imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
 
             } else {
@@ -197,6 +201,7 @@ public class Symbol extends AppCompatActivity {
                 TextView textView = findViewById(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
                 third.setBackgroundColor(Color.RED);
+                symbol_text.setText(Arrays.SYMBOL_TEXT[Arrays.SYMBOL_COUNTER]);
                 imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
 
             }
@@ -213,6 +218,7 @@ public class Symbol extends AppCompatActivity {
             //TODO allow to the ScrollView to scroll
             scrollView_symbol.setOnTouchListener((view1, motionEvent) -> false);
             //TODO making button visible
+
             to_next_btn_symbol.setVisibility(View.VISIBLE);
             scrollView_symbol.setNestedScrollingEnabled(true);
             scrollView_symbol.fullScroll(View.FOCUS_DOWN);
@@ -226,6 +232,7 @@ public class Symbol extends AppCompatActivity {
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER],R.drawable.point_style_true);
                 four.setBackgroundColor(Color.GREEN);
                 Arrays.COUNTER_OF_TRUE+=1;
+                symbol_text.setText(Arrays.SYMBOL_TEXT[Arrays.SYMBOL_COUNTER]);
                 imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
 
             } else {
@@ -233,6 +240,7 @@ public class Symbol extends AppCompatActivity {
                 TextView textView = findViewById(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
                 four.setBackgroundColor(Color.RED);
+                symbol_text.setText(Arrays.SYMBOL_TEXT[Arrays.SYMBOL_COUNTER]);
                 imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
 
             }
@@ -268,4 +276,5 @@ public class Symbol extends AppCompatActivity {
                     }
                 }).create().show();
     }
+
 }

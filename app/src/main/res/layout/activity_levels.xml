@@ -12,9 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/people"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="310dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:background="@drawable/levels_button_style"
         android:text="@string/people"/>
     <Button
         android:layout_width="match_parent"
@@ -22,25 +26,38 @@
         android:id="@+id/history"
         android:text="@string/history"
         android:layout_marginLeft="40dp"
+        android:background="@drawable/levels_button_style"
         android:layout_marginRight="40dp"
-        android:layout_marginTop="25dp"/>
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginTop="30dp"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/symbol"
-        android:layout_marginTop="25dp"
+        android:background="@drawable/levels_button_style"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="40dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
         android:layout_marginRight="40dp"
         android:text="@string/symbol"/>
+    <!--
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="40dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
         android:layout_marginRight="40dp"
+        android:background="@drawable/levels_button_style"
         android:id="@+id/baikal"
         android:text="@string/Baikal"
-        />
+        />!-->
 
 
 </LinearLayout>

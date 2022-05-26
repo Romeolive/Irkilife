@@ -67,7 +67,7 @@ public class History extends AppCompatActivity {
             overridePendingTransition(R.anim.to_next_like_list,R.anim.to_back);
 
             Arrays.COUNTER_OF_TRUE = 0;
-            History.this.finish();
+            History.this.onDestroy();
         }
 
         DocumentReference docRef = db.collection(Arrays.LEVELS_NAMES_HISTORY[Arrays.HISTORY_COUNTER]).document(Arrays.LEVELS_NAMES_HISTORY[Arrays.HISTORY_COUNTER]);
@@ -117,12 +117,13 @@ public class History extends AppCompatActivity {
                 textView.setBackgroundResource(R.drawable.point_style_true);
                 imageView_history.setImageResource(Arrays.IMAGES_HISTORY[Arrays.HISTORY_COUNTER]);
                 first.setBackgroundColor(Color.GREEN);
+                history_text.setText(Arrays.HISTORY_TEXT[Arrays.HISTORY_COUNTER]);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_HISTORY[Arrays.HISTORY_COUNTER],R.drawable.point_style_true);
                 Arrays.COUNTER_OF_TRUE+=1;
             } else {
                 first.setBackgroundColor(Color.RED);
                 imageView_history.setImageResource(Arrays.IMAGES_HISTORY[Arrays.HISTORY_COUNTER]);
-                history_text.setText(R.string.app_name);
+                history_text.setText(Arrays.HISTORY_TEXT[Arrays.HISTORY_COUNTER]);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_HISTORY[Arrays.HISTORY_COUNTER],R.drawable.point_style_false);
                 TextView textView = findViewById(Arrays.TEXT_VIEW_HISTORY[Arrays.HISTORY_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
@@ -153,6 +154,7 @@ public class History extends AppCompatActivity {
                 second.setBackgroundColor(Color.GREEN);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_HISTORY[Arrays.HISTORY_COUNTER],R.drawable.point_style_true);
                 Arrays.COUNTER_OF_TRUE+=1;
+                history_text.setText(Arrays.HISTORY_TEXT[Arrays.HISTORY_COUNTER]);
                 imageView_history.setImageResource(Arrays.IMAGES_HISTORY[Arrays.HISTORY_COUNTER]);
             } else {
 
@@ -160,6 +162,7 @@ public class History extends AppCompatActivity {
                 TextView textView = findViewById(Arrays.TEXT_VIEW_HISTORY[Arrays.HISTORY_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
                 second.setBackgroundColor(Color.RED);
+                history_text.setText(Arrays.HISTORY_TEXT[Arrays.HISTORY_COUNTER]);
                 imageView_history.setImageResource(Arrays.IMAGES_HISTORY[Arrays.HISTORY_COUNTER]);
 
 
@@ -190,6 +193,7 @@ public class History extends AppCompatActivity {
                 third.setBackgroundColor(Color.GREEN);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_HISTORY[Arrays.HISTORY_COUNTER],R.drawable.point_style_true);
                 Arrays.COUNTER_OF_TRUE+=1;
+                history_text.setText(Arrays.HISTORY_TEXT[Arrays.HISTORY_COUNTER]);
                 imageView_history.setImageResource(Arrays.IMAGES_HISTORY[Arrays.HISTORY_COUNTER]);
 
             } else {
@@ -199,6 +203,7 @@ public class History extends AppCompatActivity {
                 TextView textView = findViewById(Arrays.TEXT_VIEW_HISTORY[Arrays.HISTORY_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
                 third.setBackgroundColor(Color.RED);
+                history_text.setText(Arrays.HISTORY_TEXT[Arrays.HISTORY_COUNTER]);
                 imageView_history.setImageResource(Arrays.IMAGES_HISTORY[Arrays.HISTORY_COUNTER]);
 
             }
@@ -228,6 +233,7 @@ public class History extends AppCompatActivity {
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_HISTORY[Arrays.HISTORY_COUNTER],R.drawable.point_style_true);
                 four.setBackgroundColor(Color.GREEN);
                 Arrays.COUNTER_OF_TRUE+=1;
+                history_text.setText(Arrays.HISTORY_TEXT[Arrays.HISTORY_COUNTER]);
                 imageView_history.setImageResource(Arrays.IMAGES_HISTORY[Arrays.HISTORY_COUNTER]);
 
             } else {
@@ -235,6 +241,7 @@ public class History extends AppCompatActivity {
                 TextView textView = findViewById(Arrays.TEXT_VIEW_HISTORY[Arrays.HISTORY_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
                 four.setBackgroundColor(Color.RED);
+                history_text.setText(Arrays.HISTORY_TEXT[Arrays.HISTORY_COUNTER]);
                 imageView_history.setImageResource(Arrays.IMAGES_HISTORY[Arrays.HISTORY_COUNTER]);
 
             }
@@ -270,6 +277,9 @@ public class History extends AppCompatActivity {
                     }
                 }).create().show();
     }
+
+
+
 
 
 }

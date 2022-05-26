@@ -64,7 +64,7 @@ public class People extends AppCompatActivity {
 
            Arrays.COUNTER_OF_TRUE = 0;
            Arrays.COUNTER = 0;
-           People.this.finish();
+           People.this.onDestroy();
         }
 
         DocumentReference docRef = db.collection(Arrays.LEVELS_NAMES_PEOPLE[Arrays.COUNTER]).document(Arrays.LEVELS_NAMES_PEOPLE[Arrays.COUNTER]);
@@ -111,13 +111,15 @@ public class People extends AppCompatActivity {
                 TextView textView = findViewById(Arrays.TEXT_VIEW[Arrays.COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_true);
                 imageView.setImageResource(Arrays.IMAGES[Arrays.COUNTER]);
+                akimov_text.setText(Arrays.PEOPLE_TEXT[Arrays.COUNTER]);
                 first.setBackgroundColor(Color.GREEN);
+
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_true);
                 Arrays.COUNTER_OF_TRUE+=1;
             } else {
                 first.setBackgroundColor(Color.RED);
                 imageView.setImageResource(Arrays.IMAGES[Arrays.COUNTER]);
-                akimov_text.setText(R.string.app_name);
+                akimov_text.setText(Arrays.PEOPLE_TEXT[Arrays.COUNTER]);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_false);
                 TextView textView = findViewById(Arrays.TEXT_VIEW[Arrays.COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
@@ -146,12 +148,14 @@ public class People extends AppCompatActivity {
                 second.setBackgroundColor(Color.GREEN);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_true);
                 Arrays.COUNTER_OF_TRUE+=1;
+                akimov_text.setText(Arrays.PEOPLE_TEXT[Arrays.COUNTER]);
                 imageView.setImageResource(Arrays.IMAGES[Arrays.COUNTER]);
             } else {
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_false);
                 TextView textView = findViewById(Arrays.TEXT_VIEW[Arrays.COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
                 second.setBackgroundColor(Color.RED);
+                akimov_text.setText(Arrays.PEOPLE_TEXT[Arrays.COUNTER]);
                 imageView.setImageResource(Arrays.IMAGES[Arrays.COUNTER]);
 
             }
@@ -178,12 +182,14 @@ public class People extends AppCompatActivity {
                 third.setBackgroundColor(Color.GREEN);
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_true);
                 Arrays.COUNTER_OF_TRUE+=1;
+                akimov_text.setText(Arrays.PEOPLE_TEXT[Arrays.COUNTER]);
                 imageView.setImageResource(Arrays.IMAGES[Arrays.COUNTER]);
             } else {
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_false);
                 TextView textView = findViewById(Arrays.TEXT_VIEW[Arrays.COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
                 third.setBackgroundColor(Color.RED);
+                akimov_text.setText(Arrays.PEOPLE_TEXT[Arrays.COUNTER]);
                 imageView.setImageResource(Arrays.IMAGES[Arrays.COUNTER]);
 
             }
@@ -210,12 +216,14 @@ public class People extends AppCompatActivity {
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_true);
                 four.setBackgroundColor(Color.GREEN);
                 Arrays.COUNTER_OF_TRUE+=1;
+                akimov_text.setText(Arrays.PEOPLE_TEXT[Arrays.COUNTER]);
                 imageView.setImageResource(Arrays.IMAGES[Arrays.COUNTER]);
             } else {
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW[Arrays.COUNTER],R.drawable.point_style_false);
                 TextView textView = findViewById(Arrays.TEXT_VIEW[Arrays.COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_false);
                 four.setBackgroundColor(Color.RED);
+                akimov_text.setText(Arrays.PEOPLE_TEXT[Arrays.COUNTER]);
                 imageView.setImageResource(Arrays.IMAGES[Arrays.COUNTER]);
             }
         });
@@ -250,4 +258,5 @@ public class People extends AppCompatActivity {
                 }).create().show();
 
     }
+
 }
