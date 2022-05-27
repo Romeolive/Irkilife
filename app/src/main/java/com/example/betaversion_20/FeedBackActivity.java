@@ -26,19 +26,9 @@ public class FeedBackActivity extends AppCompatActivity {
         editText = findViewById(R.id.edit_suggest);
         send.setOnClickListener(view -> {
 
-            /*Intent intent = new Intent(Intent.ACTION_SENDTO); // it's not ACTION_SEND
-            intent.putExtra(Intent.EXTRA_SUBJECT, "Subject of email");
-            intent.putExtra(Intent.EXTRA_TEXT, "Body of email");
-            intent.setData(Uri.parse("mailto:livshitsroman225@gmail.com")); // or just "mailto:" for blank
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
-            startActivity(intent);*/
             Send("erre","eerer");
 
         });
-
-
-
-
     }
     public void Send(String addresses, String subject) {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
@@ -50,7 +40,6 @@ public class FeedBackActivity extends AppCompatActivity {
         //intent.putExtra(Intent.EXTRA_SUBJECT, subject);
         startActivity(intent);
         Toast.makeText(getApplicationContext(),"Письмо отправлено",Toast.LENGTH_SHORT).show();
-
 
     }
 }

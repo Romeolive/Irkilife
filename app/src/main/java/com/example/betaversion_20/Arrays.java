@@ -51,7 +51,7 @@ public class Arrays {
 
     public static int[] IMAGES = {R.drawable.akimov,R.drawable.yakov,R.drawable.speranskuy,R.drawable.sykachev,
             R.drawable.amurckuy,R.drawable.vampilov,R.drawable.evtushenko,R.drawable.mazuev,R.drawable.gyuday,
-            R.drawable.dmitrieva,R.drawable.volynov,R.drawable.trapeznickov};
+            R.drawable.dmitrieva,R.drawable.volynov,R.drawable.trap};
     public static int[] IMAGES_HISTORY = {R.drawable.geog,R.drawable.train,R.drawable.decembers,R.drawable.irkutsk_city,
             R.drawable.byryat,R.drawable.tof,R.drawable.christian,R.drawable.talzy,R.drawable.yasak,R.drawable.angarsk,
             R.drawable.shaman,R.drawable.oblast};
@@ -96,5 +96,6 @@ public class Arrays {
     "","А. П. Чехов был в Иркутске в 1890 году с 4 по 11 июня.",
     "Михаил Строгов - приключенческий роман Жюля Верна, написанный в 1874-1875 годах. "};
 
+    public static String[] COORDINATES = {"52.28610980773045, 104.30449400500146","52.28454598821624, 104.28813312709082","52.27927800928364, 104.31733566756866"};
 
 }

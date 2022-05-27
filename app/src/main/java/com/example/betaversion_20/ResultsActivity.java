@@ -21,7 +21,6 @@ public class ResultsActivity extends AppCompatActivity {
         second = findViewById(R.id.results_second);
         third = findViewById(R.id.results_third);
 
-
         SharedPreferences sharedPreferences = getSharedPreferences("level",MODE_PRIVATE);
         int results1 = sharedPreferences.getInt("number1",1);
         int results2 = sharedPreferences.getInt("number2",1);
@@ -29,19 +28,6 @@ public class ResultsActivity extends AppCompatActivity {
         first.setText(String.valueOf(results1));
         second.setText(String.valueOf(results2));
         third.setText(String.valueOf(results3));
-        /*if (Integer.parseInt(first.getText().toString()) < results1){
-
-        }
-        if (Integer.parseInt(second.getText().toString()) < results2){
-
-        }
-        if (Integer.parseInt(third.getText().toString()) < results3){
-
-        }*/
-
-
-
-
 
     }
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -54,6 +40,5 @@ public class ResultsActivity extends AppCompatActivity {
             Intent intent = new Intent(ResultsActivity.this, BackgroundMusicService.class);
             startService(intent);
         }
-
     }
 }

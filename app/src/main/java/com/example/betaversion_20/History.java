@@ -187,7 +187,6 @@ public class History extends AppCompatActivity {
 
             if (answer.equals(Arrays.KEY_HISTORY[Arrays.HISTORY_COUNTER])) {
 
-
                 TextView textView = findViewById(Arrays.TEXT_VIEW_HISTORY[Arrays.HISTORY_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_true);
                 third.setBackgroundColor(Color.GREEN);
@@ -273,7 +272,6 @@ public class History extends AppCompatActivity {
                         History.this.onDestroy();
                         Arrays.COUNTER = 0;
                         Arrays.COUNTER_OF_TRUE = 0;
-
                     }
                 }).create().show();
     }
