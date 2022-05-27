@@ -27,7 +27,7 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity {
 
     Button play, results;
-    Button setting;
+    Button setting, feedback;
 
 
     @Override
@@ -38,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
         setting = findViewById(R.id.settings_btn);
         play = findViewById(R.id.play_menu_btn);
         results = findViewById(R.id.result_menu_btn);
+        feedback = findViewById(R.id.feedback);
+
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, FeedBackActivity.class));
+            }
+        });
 
 
         setting.setOnClickListener(view -> {

@@ -40,5 +40,4 @@ public class AlarmManag extends BroadcastReceiver {
         notificationManager.notify(1238,nBuilder.build());
 
     }
-    /*.setContentTitle("Не забудьте зайти к нам\uD83D\uDC7F❤\uD83D\uDC7F")*/
 }

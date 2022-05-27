@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BetaVersion_20">
         <activity
+            android:name=".FeedBackActivity"
+            android:exported="true" />
+        <activity
             android:name=".ResultsActivity"
             android:exported="true" />
         <activity
@@ -47,7 +50,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
 
         <receiver android:name=".AlarmManag" />
     </application>

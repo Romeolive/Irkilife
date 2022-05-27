@@ -68,6 +68,7 @@ public class Symbol extends AppCompatActivity {
             Symbol.this.onDestroy();
         }
 
+        //TODO открытие базы данных
         DocumentReference docRef = db.collection(Arrays.LEVEL_NAMES_SYMBOLS[Arrays.SYMBOL_COUNTER]).document(Arrays.LEVEL_NAMES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
 
         docRef.get().addOnCompleteListener(task -> {
@@ -79,7 +80,6 @@ public class Symbol extends AppCompatActivity {
                     second.setText(document.getData().get(Arrays.ANSWERS_NAMES_SYMBOLS[Arrays.SYMBOL_COUNTER]+Arrays.NUMBERS[1]).toString());
                     third.setText(document.getData().get(Arrays.ANSWERS_NAMES_SYMBOLS[Arrays.SYMBOL_COUNTER]+Arrays.NUMBERS[2]).toString());
                     four.setText(document.getData().get(Arrays.ANSWERS_NAMES_SYMBOLS[Arrays.SYMBOL_COUNTER]+Arrays.NUMBERS[3]).toString());
-
                 } else {
                     Log.d(TAG, "No such document");
                 }
@@ -89,7 +89,6 @@ public class Symbol extends AppCompatActivity {
         });
 
         //TODO connecting the reboot function to the level
-        //to_next_btn.setOnClickListener(view -> reload());
         to_next_btn_symbol.setOnClickListener(view -> reload());
         //TODO making the button invisible
         to_next_btn_symbol.setVisibility(View.GONE);
@@ -144,7 +143,6 @@ public class Symbol extends AppCompatActivity {
             scrollView_symbol.setNestedScrollingEnabled(true);
             scrollView_symbol.fullScroll(View.FOCUS_DOWN);
 
-
             if (answer.equals(Arrays.KEY_SYMBOLS[Arrays.SYMBOL_COUNTER])) {
 
                 TextView textView = findViewById(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER]);
@@ -185,7 +183,6 @@ public class Symbol extends AppCompatActivity {
 
             if (answer.equals(Arrays.KEY_SYMBOLS[Arrays.SYMBOL_COUNTER])) {
 
-
                 TextView textView = findViewById(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER]);
                 textView.setBackgroundResource(R.drawable.point_style_true);
                 third.setBackgroundColor(Color.GREEN);
@@ -195,7 +192,6 @@ public class Symbol extends AppCompatActivity {
                 imageView_symbol.setImageResource(Arrays.IMAGES_SYMBOLS[Arrays.SYMBOL_COUNTER]);
 
             } else {
-
 
                 Arrays.MAP_AR.put(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER],R.drawable.point_style_false);
                 TextView textView = findViewById(Arrays.TEXT_VIEW_SYMBOL[Arrays.SYMBOL_COUNTER]);
@@ -265,15 +261,12 @@ public class Symbol extends AppCompatActivity {
                 .setTitle("Выйти в основное меню?")
                 .setMessage("Вы действительно хотите выйти?")
                 .setNegativeButton(android.R.string.no, null)
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface arg0, int arg1) {
-                        //People.super.onBackPressed();
-                        startActivity(new Intent(Symbol.this,MainActivity.class));
-                        Symbol.this.onDestroy();
-                        Arrays.COUNTER = 0;
-                        Arrays.COUNTER_OF_TRUE = 0;
+                .setPositiveButton(android.R.string.yes, (arg0, arg1) -> {
+                    startActivity(new Intent(Symbol.this,MainActivity.class));
+                    Symbol.this.onDestroy();
+                    Arrays.COUNTER = 0;
+                    Arrays.COUNTER_OF_TRUE = 0;
 
-                    }
                 }).create().show();
     }
 

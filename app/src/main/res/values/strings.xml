@@ -22,4 +22,6 @@
     <string name="first_lvl">Уровень 1</string>
     <string name="second_lvl">Уровень 2</string>
     <string name="third_lvl">Уровень 3</string>
+    <string name="Suggest">Пожелания и замечания</string>
+    <string name="Send">Отправить</string>
 </resources>
